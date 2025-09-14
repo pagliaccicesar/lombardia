@@ -405,6 +405,13 @@ button {
     font-size: var(--normal-font-size);
     cursor: pointer;
 }
+.mapa-contacto {width: 90%; display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            gap: 40px;}
 
 /*FOOTER*/
 
@@ -416,7 +423,7 @@ button {
 
 .footer-social { font-size: 1.4rem; margin-right: var(--mb1); }
     .footer-social:hover { color: var(--first-color); }
-    .footer-firma { margin: 25px 10px 0 };
+    .footer-firma { padding-top: 25px};
 
 /*MEDIA QUERIES*/
 
@@ -460,8 +467,21 @@ button {
     .contact-container { grid-template-columns: repeat(2, 1fr); justify-items: center; }
     .contact-form { width: 380px; }
 
+    .mapa-contacto {width: 100%; margin-top: 5vh; display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 40px;}
+
     .footer-container { grid-template-columns: repeat(4, 1fr); justify-items: center; } 
-    .footer-firma { margin: 25px 10px 0 };
+    .footer-firma { display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 15px auto;
+            flex-wrap: wrap; };
 
 } 
 
