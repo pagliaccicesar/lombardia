@@ -370,7 +370,7 @@ button {
 }
 
 .portfolio-img:hover .portfolio-link { bottom: 0; }
-.portfolio-link-name { color: var(--dark-color); }
+.portfolio-link-name { color: var(--dark-color); padding-bottom: 45px; }
 
 /******** CONTACTO *******/
 
@@ -402,6 +402,9 @@ button {
     font-size: var(--normal-font-size);
     cursor: pointer;
 }
+.contact-button:hover {    
+    background-color: var(--dark-color) ;    
+}  
 .mapa-contacto {
     width: 90%;
     display: flex;
