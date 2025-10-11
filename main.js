@@ -93,6 +93,32 @@ sr.reveal('.contact-button', {delay: 600});
 
 
 
+//// correo
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault(); // evita recargar la página
+
+    const formData = new FormData(this);
+
+    fetch("enviar_formulario.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Nos comunicaremos a la brevedad ✅");
+        document.getElementById("contactForm").reset();
+    })
+    .catch(error => {
+        alert("Hubo un error al enviar el formulario ❌");
+        console.error(error);
+    });
+});
+
+
+
+
+
+
 
 
 

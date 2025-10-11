@@ -7,6 +7,7 @@
     <meta name="keywords" content="Puertas, portones, reformas, fabricación, automatización, seguridad, puertas blindadas, portones automáticos, control remoto">
     <meta name="copyright" content="Lombardía">
     <meta name="author" content="Cesar Pagliacci">
+    <meta name="google-site-verification" content="3wifNfzxoVcNHu-tIPVZ8g1ZQlqYNVKwN_zUdwUJVtk" />
     <link rel="icon" type="image/x-icon" href="./img/logo_sin_fondo.png">
     <title>Lombardía | Portones y Seguridad</title>
     <link rel="stylesheet" href="./main.css">
@@ -151,7 +152,7 @@
                     <img src="./img/247756-1920w.png" alt="work image">
 
                     <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
+                        <a href="#" class="portfolio-link-name">Semáforo LED</a>
                     </div>
                 </div>
 
@@ -159,7 +160,7 @@
                     <img src="./img/puerta-1920w.png" alt="work image">
 
                     <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
+                        <a href="#" class="portfolio-link-name">Puertas blindadas</a>
                     </div>
                 </div>
 
@@ -167,7 +168,7 @@
                     <img src="./img/puerta-blindada-1920w.png" alt="work image">
 
                     <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name"></a>
+                        <a href="#" class="portfolio-link-name">Puertas blindadas</a>
                     </div>
                 </div>
 
@@ -187,7 +188,7 @@
                     <!--<img src="https://i.postimg.cc/CxZRXj4S/work2.jpg" alt="work image">-->
                     <img src="./img/card.png" alt="work image">
                     <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name"></a>
+                        <a href="https://wa.me/+5491169721000?text=¡Te+escribo+desde+tu+web!" class="portfolio-link-name" target="_blank">WHATSAPP</a>
                     </div>
                 </div>
 
@@ -223,7 +224,46 @@
                     <span class="contact-text">15 3066 4393</span>
                 </div>
 
-                <form action="" class="contact-form">
+
+
+
+                <form id="contactForm" class="contact-form">
+                <div class="contact-inputs">
+                    <input type="text" name="nombre" placeholder="Nombre" class="contact-input" required>
+                    <input type="email" name="email" placeholder="Email" class="contact-input" required>
+                </div>
+
+                <textarea name="mensaje" cols="0" rows="10" class="contact-input" placeholder="Escriba su mensaje..." required></textarea>
+
+                <input type="submit" value="Enviar" class="contact-button">
+                </form>
+                <script>
+                document.getElementById("contactForm").addEventListener("submit", function(e){
+                    e.preventDefault(); // evita recargar la página
+
+                    const formData = new FormData(this);
+
+                    fetch("contact-form.php", {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        alert("Nos comunicaremos a la brevedad ✅");
+                        document.getElementById("contactForm").reset();
+                    })
+                    .catch(error => {
+                        alert("Hubo un error al enviar el formulario ❌");
+                        console.error(error);
+                    });
+                });
+                </script>
+
+
+
+                
+
+                <!--<form action="" class="contact-form">
                     <div class="contact-inputs">
                         <input type="text" placeholder="Nombre" class="contact-input">
                         <input type="email" placeholder="Email" class="contact-input">
@@ -232,7 +272,8 @@
                     <textarea name="" id="" cols="0" rows="10" class="contact-input"></textarea>
 
                     <input type="submit" value="Enviar" class="contact-button">
-                </form>
+                </form>-->
+
             </div>
 
             <div class="mapa-contacto">
@@ -284,8 +325,8 @@
             <a href="https://cesarpagliacci.com.ar" target="_blank"><p class="footer-firma">&#169; 2025 Lombardía | Diseño Cesar Pagliacci</p></a>
     </footer>        
 
-    <!--<script src="https://unpkg.com/scrollreveal"></script>-->
-    <script src="./style.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--<script src="./style.js"></script>-->
     <script src="./main.js"></script>
 </body>
 </html>
