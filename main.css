@@ -712,7 +712,7 @@ div.galeria div.single-galeria img:hover{
 .footer-link:hover { color: var(--first-color); }
 .footer-social { font-size: 1.4rem; margin-right: var(--mb1); }
 .footer-social:hover { color: var(--first-color); }
-.footer-firma { padding-top: 25px};
+.footer-firma { padding-top: 25px; padding-left: 10px};
 
 /*MEDIA QUERIES*/
 
